@@ -117,15 +117,31 @@ input, button {
     border-radius: 5px;
 }
 
-.search_section > form > button {
-    background-color: #228B22;
+.search_section > form > .buttons {
+    margin: 8px;
+    margin-left: 0px;
+    display: inline block;
+}
+
+.search_section > form > .buttons > button {
     color: white;
     border: 0;
     border-radius: 5px;
-    display: block;
-    width: 100%;
+    width: 30%;
     padding: 8px;
     cursor: pointer;
+}
+
+.search_section > form > .buttons > #searchSubmit {
+    background-color: darkblue;
+}
+
+.search_section > form > .buttons > #clearSearch {
+    background-color: darkred;
+}
+
+.search_section > form > .buttons > #resetFilter {
+    background-color: darkorange;
 }
 
 .book_shelf {
@@ -164,6 +180,11 @@ input, button {
     cursor: pointer;
 }
 
+.book_shelf > .book_list > .book_item > .action > .blue {
+    background-color: blue;
+    color: white;
+}
+
 .book_shelf > .book_list > .book_item > .action > .green {
     background-color: darkgreen;
     color: white;
@@ -197,4 +218,4 @@ footer {
         width: 100%;
         padding: 0;
     }
- }
+}
