@@ -11,6 +11,8 @@ const submitForm = document.getElementById('inputBook');
 const buttonSubmit = document.getElementById('bookSubmit');
 const searchForm = document.getElementById('searchBook');
 const searchTitle = document.getElementById('searchBookTitle')
+const clearSearch = document.getElementById('clearSearch')
+const resetFilter = document.getElementById('resetFilter')
 const uncompletedBookList = document.getElementById('incompleteBookshelfList');
 const completedBookList = document.getElementById('completeBookshelfList');
 let bookSearch = [];
@@ -61,6 +63,16 @@ bookIsComplete.addEventListener('click', function (event) {
   } else {
     buttonSubmit.innerHTML = 'Masukkan Buku ke rak <span>Belum selesai dibaca</span>';
   }
+});
+
+clearSearch.addEventListener('click', function(event){
+  searchTitle.value = '';
+  isSearch = false;
+});
+
+resetFilter.addEventListener('click', function(event){
+  clearSearch.click();
+  document.dispatchEvent(new Event(RENDER_EVENT));
 });
 
 function generateId () {
